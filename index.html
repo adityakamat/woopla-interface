@@ -1,0 +1,82 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+    <script src="script.js"></script>
+    <title></title>
+  <head>
+  <body>
+	<div  id="loader" class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+    <div class="">
+      <div class="col-lg-12">
+        <div class="col-md-6 align-self-center">
+          <div class="panel panel-primary" style="border-color: #000000;">
+            <div class="panel-heading" style="background-color: #000000;border-color: #000000;">
+              <img src="logo.png" alt="Deloitte Logo"
+              style="height: 17px;" />
+              <h3 class="panel-title" style="display: contents;">Woopla Interface</h3>
+            </div>
+            <div class="panel-body">
+              <div class="col-md-12">
+                <div class="col-md-6 align-self-center border-right">
+				<label for="inputClientId">Client ID(get)</label> 
+				<select class="form-control" id="inputClientId">
+				</select>
+                
+                <!-- <input type="text" id="inputClientId" class="form-control" text='' autofocus="" value="DEL003" /> -->
+                <label for="inputPassPhrase">Passphrase(get)</label> 
+                <input type="text" id="inputPassPhrase" class="form-control" text='' autofocus="" value="fg2.epw74n89kp" /> 
+                <label for="inputNumberofRecords">No. of routes to be fetched</label> 
+                <input type="number" id="inputNumberofRecords" class="form-control" text='' autofocus="" value="10"
+                style="margin-bottom:1rem" /> 
+                <label for="inputAdditionalParameters">+Params(Seperated by comma)</label> 
+                <input type="text" id="inputAdditionalParameters" class="form-control" text='' autofocus=""
+                value="EMERGENCY,VMADDRESS" style="margin-bottom:1rem" /></div>
+                <div class="col-md-6 align-self-center">
+                <label for="inputClientId2">Client ID(modify)</label> 
+                <select class="form-control" id="inputClientId2">
+				</select>
+                <label for="inputPassPhrase2">Passphrase(modify)</label> 
+                <input type="text" id="inputPassPhrase2" class="form-control" text='' autofocus="" value="fg2.epw74n89kp"
+                style="margin-bottom:1rem" /></div>
+              </div>
+              <div class="col-md-12">
+                <div class="col-md-6 align-self-center border-right">
+                  <button id='FetchFromServer' class="btn btn-success">1. Fetch Data</button>
+                </div>
+                <div class="col-md-6 align-self-center border-right">
+                  <button id='SendToServer' class="btn btn-primary">2. Send Data</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="instructions" style="font-style: italic;color: red;">Instructions:
+          <br />1. Check if the parameters are right
+          <br />2. Click Fetch data, it will appear in right hand side section
+          <br />3. Edit/Paste update data and then click Send to Server
+          <br />4. Review the response in text editor
+          <br /></div>
+		  
+		  <div id="link" style="font-style: italic;color: blue;">
+			  <a  href="/woopla/editor.php" class="btn btn-primary" >
+			  EDIT CLIENT IDs
+			  </a>
+		  </div>
+		  </div>
+		
+        <div class="col-md-6 align-self-center">
+          <div class="panel panel-success">
+            <div class="panel-heading">
+              <h3 class="panel-title">Response from server will appear here:</h3>
+            </div>
+            <div class="panel-body" style="height: 100%">Text Editor: 
+            <textarea id="editor" contenteditable="true" style="width:100%; height: 95%"></textarea></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
