@@ -1,7 +1,7 @@
 <?php
 
 // configuration
-$url = '/woopla';
+$url = "https://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
 $file = 'clients.txt';
 
 // check if form has been submitted
