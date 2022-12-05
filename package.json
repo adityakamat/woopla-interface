@@ -3,9 +3,15 @@
    "version": "1.0.0",
    "description": "",
    "scripts": {
-       "build": "echo \"No build specified\" && exit 1",
-       "test": "echo \"No test specified\" && exit 1",
-       "start": "node index.js"
+    "test": "composer test",
+    "okta-hosted-login-server": "composer sample:okta-hosted-login",
+    "test:okta-hosted-login": "protractor okta-oidc-tck/e2e-tests/okta-hosted-login/conf.js",
+    "custom-login-server": "composer sample:custom-login",
+    "setup-env": "node scripts/setup-env.js",
+    "test:custom-login": "protractor okta-oidc-tck/e2e-tests/custom-login/conf.js",
+    "resource-server": "composer sample:resource-server",
+    "test:resource-server": "jasmine okta-oidc-tck/resource-server/specs/okta-resource-server-spec.js",
+    "pretest": "node ./scripts/update-se-drivers.js"
     },
     "repository": {
         "type": "git",
